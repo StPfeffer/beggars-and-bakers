@@ -86,7 +86,7 @@ O jogo tem múltiplos finais baseados na satisfação do rei:
 
 1. **Final Perfeito (5 Estrelas):** O rei fica encantado com o café da manhã e recompensa o cavaleiro com honras e riquezas.
 2. **Final Regular (3 Estrelas):** O rei aceita o café da manhã, mas o cavaleiro não recebe recompensas extras.
-3. **Final Ruim (1 Estrela):** O rei morre, e o cavaleiro é banido do reino.
+3. **Final Ruim (1 Estrela):** O rei manda o cavaleiro para a guilhotina.
 
 ---
 
