@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://b6mfmin5y3j8"]
+
+[ext_resource type="Texture2D" uid="uid://dyn5jcg2pqd2y" path="res://player/sprites/crouch_walk.png" id="1_3vk4l"]
+[ext_resource type="Texture2D" uid="uid://c15o4twnhjlud" path="res://player/sprites/normal/crouch_walk.png" id="2_egvko"]
+
+[resource]
+diffuse_texture = ExtResource("1_3vk4l")
+normal_texture = ExtResource("2_egvko")

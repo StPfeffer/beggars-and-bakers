@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://efo0h3a148yn"]
+
+[ext_resource type="Texture2D" uid="uid://bvnvl6ch31d6v" path="res://enemies/beggar/sprites/run.png" id="1_swtv3"]
+[ext_resource type="Texture2D" uid="uid://ciggdcylnyuky" path="res://enemies/beggar/sprites/normal/run.png" id="2_v83iy"]
+
+[resource]
+diffuse_texture = ExtResource("1_swtv3")
+normal_texture = ExtResource("2_v83iy")
