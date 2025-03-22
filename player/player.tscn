@@ -1,7 +1,7 @@
 [gd_scene load_steps=115 format=3 uid="uid://dfdqc4uwjj0v"]
 
 [ext_resource type="Texture2D" uid="uid://dypc6jr8h70pd" path="res://player/sprites/idle.png" id="1_cqwbn"]
-[ext_resource type="Script" path="res://player/scripts/player.gd" id="1_yuw0m"]
+[ext_resource type="Script" uid="uid://dp3rih3qebykh" path="res://player/scripts/player.gd" id="1_yuw0m"]
 [ext_resource type="Texture2D" uid="uid://n80ycv5qnwt" path="res://player/sprites/crouch.png" id="2_fwihy"]
 [ext_resource type="Texture2D" uid="uid://ddgy02h1ec1nt" path="res://player/sprites/tres/attack.tres" id="3_smyco"]
 [ext_resource type="Texture2D" uid="uid://djus2nvi0cta4" path="res://player/sprites/fall.png" id="7_jmu38"]
@@ -16,15 +16,15 @@
 [ext_resource type="Texture2D" uid="uid://b5hwm8ql6q26p" path="res://player/sprites/tres/attack_2.tres" id="17_gib6t"]
 [ext_resource type="Texture2D" uid="uid://b6mfmin5y3j8" path="res://player/sprites/tres/crouch_walk.tres" id="17_p47ge"]
 [ext_resource type="Texture2D" uid="uid://cjwru412kw4wt" path="res://player/sprites/tres/jump.tres" id="17_pwj2j"]
-[ext_resource type="Script" path="res://player/states/states.gd" id="17_rd7im"]
-[ext_resource type="Script" path="res://player/states/locked.gd" id="18_10ovg"]
-[ext_resource type="Script" path="res://player/states/idle.gd" id="18_nobr8"]
-[ext_resource type="Script" path="res://player/states/run.gd" id="19_jjv2n"]
-[ext_resource type="Script" path="res://player/states/jump.gd" id="20_jxofw"]
+[ext_resource type="Script" uid="uid://dpgjphhrk8ivc" path="res://player/states/states.gd" id="17_rd7im"]
+[ext_resource type="Script" uid="uid://je4ap76s4syq" path="res://player/states/locked.gd" id="18_10ovg"]
+[ext_resource type="Script" uid="uid://b0cgvwbxgq4i7" path="res://player/states/idle.gd" id="18_nobr8"]
+[ext_resource type="Script" uid="uid://cbgyf0jljdxue" path="res://player/states/run.gd" id="19_jjv2n"]
+[ext_resource type="Script" uid="uid://1ijqti50y1xj" path="res://player/states/jump.gd" id="20_jxofw"]
 [ext_resource type="Texture2D" uid="uid://do5xk78bhrthx" path="res://player/sprites/tres/dash.tres" id="20_k4bvp"]
-[ext_resource type="Script" path="res://player/states/jump_peak.gd" id="21_16w2r"]
-[ext_resource type="Script" path="res://player/states/fall.gd" id="22_2fe0a"]
-[ext_resource type="Script" path="res://player/states/wall_sliding.gd" id="25_o70aj"]
+[ext_resource type="Script" uid="uid://4oae76qyra2f" path="res://player/states/jump_peak.gd" id="21_16w2r"]
+[ext_resource type="Script" uid="uid://d2bf1e1qoe8dk" path="res://player/states/fall.gd" id="22_2fe0a"]
+[ext_resource type="Script" uid="uid://18f5nolfhuds" path="res://player/states/wall_sliding.gd" id="25_o70aj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oblp7"]
 atlas = ExtResource("3_smyco")
@@ -719,7 +719,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asl7c"]
-radius = 20.0
+radius = 19.0
 height = 68.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -728,14 +728,14 @@ collision_mask = 29
 script = ExtResource("1_yuw0m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, -72)
+position = Vector2(9, -72)
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_p2caf")
-animation = &"wall_slide"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -34)
+position = Vector2(-1, -34)
 shape = SubResource("CapsuleShape2D_asl7c")
 
 [node name="Label" type="Label" parent="."]

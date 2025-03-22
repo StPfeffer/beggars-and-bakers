@@ -51,27 +51,27 @@ class_name Player extends CharacterBody2D
 ##wall latching must be enabled for this to work. If enabled, the player must hold down the "latch" key to wall latch. Assign "latch" in the project input settings. The player's input will be ignored when latching.
 @export var wallLatchingModifer: bool = false
 
-#@export_category("Animations (Check Box if has animation)")
-###Animations must be named "run" all lowercase as the check box says
-#@export var run: bool
-###Animations must be named "jump" all lowercase as the check box says
-#@export var jump: bool
-###Animations must be named "idle" all lowercase as the check box says
-#@export var idle: bool
-###Animations must be named "walk" all lowercase as the check box says
-#@export var walk: bool
-###Animations must be named "slide" all lowercase as the check box says
-#@export var slide: bool
-###Animations must be named "latch" all lowercase as the check box says
-#@export var latch: bool
-###Animations must be named "falling" all lowercase as the check box says
-#@export var falling: bool
-###Animations must be named "crouch_idle" all lowercase as the check box says
-#@export var crouch_idle: bool
-###Animations must be named "crouch_walk" all lowercase as the check box says
-#@export var crouch_walk: bool
-###Animations must be named "roll" all lowercase as the check box says
-#@export var roll: bool
+@export_category("Animations (Check Box if has animation)")
+##Animations must be named "run" all lowercase as the check box says
+@export var run: bool
+##Animations must be named "jump" all lowercase as the check box says
+@export var jump: bool
+##Animations must be named "idle" all lowercase as the check box says
+@export var idle: bool
+##Animations must be named "walk" all lowercase as the check box says
+@export var walk: bool
+##Animations must be named "slide" all lowercase as the check box says
+@export var slide: bool
+##Animations must be named "latch" all lowercase as the check box says
+@export var latch: bool
+##Animations must be named "falling" all lowercase as the check box says
+@export var falling: bool
+##Animations must be named "crouch_idle" all lowercase as the check box says
+@export var crouch_idle: bool
+##Animations must be named "crouch_walk" all lowercase as the check box says
+@export var crouch_walk: bool
+##Animations must be named "roll" all lowercase as the check box says
+@export var roll: bool
 
 #endregion
 
@@ -282,6 +282,7 @@ func _handle_right_movement(delta):
 		velocity.x = maxSpeed
 	else:
 		velocity.x += acceleration * delta
+
 	if velocity.x < 0:
 		_handle_deceleration(delta)
 
@@ -291,6 +292,7 @@ func _handle_left_movement(delta):
 		velocity.x = -maxSpeed
 	else:
 		velocity.x -= acceleration * delta
+
 	if velocity.x > 0:
 		_handle_deceleration(delta)
 
@@ -310,11 +312,13 @@ func _adjust_max_speed():
 
 
 func _handle_deceleration(delta):
-	if !(leftHold or rightHold):
-		if !instantStop:
-			_decelerate(delta, false)
-		else:
-			velocity.x = 0
+	if leftHold or rightHold:
+		return
+
+	if !instantStop:
+		_decelerate(delta, false)
+	else:
+		velocity.x = 0
 
 
 func _decelerate(delta, vertical):
@@ -407,6 +411,7 @@ func _handle_jump_input():
 
 func _reset_jump_state():
 	jumpCount = jumps
+
 	if coyoteTime > 0:
 		coyoteActive = true
 	else:
@@ -485,7 +490,7 @@ func _inputPauseReset(time):
 
 func handle_landing():
 	if (is_on_floor()):
-		jumpCount = jumps
+		_reset_jump_state()
 		change_state(state_machine.IDLE)
 
 

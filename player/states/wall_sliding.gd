@@ -17,7 +17,7 @@ func update(delta: float):
 	player.handle_falling(delta)
 
 	handle_animations()
-	handle_idle()
+	#handle_idle()
 
 
 func handle_idle():
