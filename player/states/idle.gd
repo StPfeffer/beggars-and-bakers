@@ -7,10 +7,10 @@ func enter_state():
 
 func update(delta: float):
 	player.handle_falling(delta)
-	player.handle_jump(delta)
+	player.handle_jump()
 	player.handle_horizontal_movement(delta)
 
-	if player.leftHold or player.rightHold:
+	if player.left_hold or player.right_hold:
 		player.change_state(states.RUN)
 
 	handle_animations()
