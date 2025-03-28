@@ -7,7 +7,7 @@ func enter_state():
 
 func update(delta: float):
 	player.handle_horizontal_movement(delta)
-	player.handle_jump(delta)
+	player.handle_jump()
 	player.handle_falling(delta)
 
 	handle_animations()
@@ -15,8 +15,8 @@ func update(delta: float):
 
 
 func handle_idle():
-	#if player.is_on_floor() and player.current_state != states.Latching:
-	if player.is_on_floor() and (!player.leftHold and !player.rightHold):
+	# if player.is_on_floor() and player.current_state != states.Latching:
+	if player.is_on_floor() and (!player.left_hold and !player.right_hold):
 		player.change_state(states.IDLE)
 
 

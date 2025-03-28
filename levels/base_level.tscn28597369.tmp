@@ -1170,8 +1170,6 @@ tile_set = SubResource("TileSet_rila8")
 
 [node name="Player" parent="." instance=ExtResource("4_s3jm0")]
 position = Vector2(-110, 0)
-max_speed = 280.0
-shift_amount = 20
 jumps = 4
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

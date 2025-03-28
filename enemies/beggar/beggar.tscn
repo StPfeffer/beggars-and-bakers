@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://44enpfk51lgr"]
+[gd_scene load_steps=65 format=3 uid="uid://44enpfk51lgr"]
 
 [ext_resource type="Texture2D" uid="uid://ccl4yenyfsdo7" path="res://enemies/beggar/sprites/attack_1.png" id="1_s0mep"]
 [ext_resource type="Script" uid="uid://crkl4a6jaun61" path="res://enemies/beggar/scripts/beggar.gd" id="1_sd0s3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dhn2wt56dn2h3" path="res://enemies/beggar/sprites/idle_2.png" id="7_rs0tu"]
 [ext_resource type="Texture2D" uid="uid://efo0h3a148yn" path="res://enemies/beggar/sprites/tres/run.tres" id="8_fp62o"]
 [ext_resource type="Texture2D" uid="uid://bn1eybjs4bs2b" path="res://enemies/beggar/sprites/tres/walk.tres" id="10_xfcfk"]
+[ext_resource type="AudioStream" uid="uid://dvn2vrsw8oj11" path="res://enemies/beggar/sounds/base.mp3" id="11_20d1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p4hgi"]
 atlas = ExtResource("1_s0mep")
@@ -454,5 +455,11 @@ offset_bottom = 23.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_20d1r")
+autoplay = true
+max_distance = 451.0
+attenuation = 2.73208
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
