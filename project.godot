@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Beggars & Bakers"
 run/main_scene="uid://b7lnmjlb1wp1m"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
 boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
@@ -92,3 +92,4 @@ attack={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.211765, 0.258824, 0.164706, 1)

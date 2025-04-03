@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0v526diua06q"
-path="res://.godot/imported/Light_charge.png-806dd705bc7ff23339f8ecf86c22247a.ctex"
+uid="uid://m8r786wwl5wh"
+path="res://.godot/imported/hurt.png-aa82e7a99dca0c1f7701a4b74299636f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/wizard/sprites/Light_charge.png"
-dest_files=["res://.godot/imported/Light_charge.png-806dd705bc7ff23339f8ecf86c22247a.ctex"]
+source_file="res://player/sprites/new/hurt.png"
+dest_files=["res://.godot/imported/hurt.png-aa82e7a99dca0c1f7701a4b74299636f.ctex"]
 
 [params]
 

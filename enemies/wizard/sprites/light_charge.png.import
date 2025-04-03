@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsjbxisct76qv"
-path="res://.godot/imported/Jump.png-58ed52e5e36b265d16bb77eabc28fec0.ctex"
+uid="uid://buk6j0wl2hiqy"
+path="res://.godot/imported/light_charge.png-9dc6bff3178ddd084ac6ece90485c84c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/wizard/sprites/Jump.png"
-dest_files=["res://.godot/imported/Jump.png-58ed52e5e36b265d16bb77eabc28fec0.ctex"]
+source_file="res://enemies/wizard/sprites/light_charge.png"
+dest_files=["res://.godot/imported/light_charge.png-9dc6bff3178ddd084ac6ece90485c84c.ctex"]
 
 [params]
 

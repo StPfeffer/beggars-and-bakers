@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxyvonh6wccyb"
-path="res://.godot/imported/Charge.png-887a266ed152df60d8c6bc046d2b2e0e.ctex"
+uid="uid://c8kvdfth5pc3g"
+path="res://.godot/imported/charge.png-22ae561327ebcaadb3979e6cabac1abc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/wizard/sprites/Charge.png"
-dest_files=["res://.godot/imported/Charge.png-887a266ed152df60d8c6bc046d2b2e0e.ctex"]
+source_file="res://enemies/wizard/sprites/charge.png"
+dest_files=["res://.godot/imported/charge.png-22ae561327ebcaadb3979e6cabac1abc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw3xelflttn2s"
-path="res://.godot/imported/Idle.png-09f1702aa18b4e935bb73e3e194a052b.ctex"
+uid="uid://bgs3v7nfumw45"
+path="res://.godot/imported/hurt.png-4486e3a0a6520af732f89a0aa30bcb3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/wizard/sprites/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-09f1702aa18b4e935bb73e3e194a052b.ctex"]
+source_file="res://enemies/wizard/sprites/hurt.png"
+dest_files=["res://.godot/imported/hurt.png-4486e3a0a6520af732f89a0aa30bcb3b.ctex"]
 
 [params]
 

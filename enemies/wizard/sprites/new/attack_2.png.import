@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1rannr63tx5x"
-path="res://.godot/imported/Run.png-06d21933bb656f69c65825c330f8fc06.ctex"
+uid="uid://rrd4k1a6h75x"
+path="res://.godot/imported/attack_2.png-b354e26ef44adcef612455c33d255ab1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/wizard/sprites/Run.png"
-dest_files=["res://.godot/imported/Run.png-06d21933bb656f69c65825c330f8fc06.ctex"]
+source_file="res://enemies/wizard/sprites/new/attack_2.png"
+dest_files=["res://.godot/imported/attack_2.png-b354e26ef44adcef612455c33d255ab1.ctex"]
 
 [params]
 

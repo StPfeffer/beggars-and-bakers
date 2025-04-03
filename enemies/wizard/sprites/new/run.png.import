@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwtxmo6ekxs6c"
-path="res://.godot/imported/Light_ball.png-4ff00552b048cce0d755681262cf7fbf.ctex"
+uid="uid://bf8rtarf7yyr2"
+path="res://.godot/imported/run.png-7bfca91f4a305324dc6db60e0d438277.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/wizard/sprites/Light_ball.png"
-dest_files=["res://.godot/imported/Light_ball.png-4ff00552b048cce0d755681262cf7fbf.ctex"]
+source_file="res://enemies/wizard/sprites/new/run.png"
+dest_files=["res://.godot/imported/run.png-7bfca91f4a305324dc6db60e0d438277.ctex"]
 
 [params]
 
