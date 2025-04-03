@@ -506,3 +506,16 @@ func handle_falling(delta):
 		change_state(state_machine.FALL)
 
 #endregion
+
+@onready var footstep_sound = $AudioStreamPlayer2D  # Certifique-se de que o caminho do nó está correto
+
+var is_walking = false
+
+func _process(delta):
+	if is_on_floor() and velocity.length() > 0.1:  # Se estiver se movendo
+		if !footstep_sound.playing:  # Evita tocar várias vezes ao mesmo tempo
+			footstep_sound.play()
+		is_walking = true
+	else:
+		is_walking = false
+		footstep_sound.stop()
