@@ -1240,7 +1240,7 @@ shift_amount = 20
 jumps = 4
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(276, -69)
+position = Vector2(95, -65)
 texture = ExtResource("5_s8wix")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
@@ -1248,7 +1248,7 @@ position = Vector2(720, -205)
 texture = ExtResource("5_s8wix")
 
 [node name="Beggar" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_jvo4l")]
-position = Vector2(62, 0)
+position = Vector2(58, 2)
 player = NodePath("../Player")
 speed = 50
 chaseSpeed = 225
