@@ -1,0 +1,389 @@
+{
+  "gold_coin": {
+    "name": "Gold Coin",
+    "description": "A shiny gold coin.",
+    "value": 100,
+    "weight": 0.01,
+    "stack_size": 1000,
+    "type": "currency"
+  },
+  "silver_coin": {
+    "name": "Silver Coin",
+    "description": "A shiny silver coin.",
+    "value": 10,
+    "weight": 0.005,
+    "stack_size": 1000,
+    "type": "currency"
+  },
+  "bronze_coin": {
+    "name": "Bronze Coin",
+    "description": "A shiny bronze coin.",
+    "value": 1,
+    "weight": 0.001,
+    "stack_size": 1000,
+    "type": "currency"
+  },
+  "health_potion": {
+    "name": "Health Potion",
+    "description": "Restores health.",
+    "value": 50,
+    "weight": 0.2,
+    "stack_size": 20,
+    "type": "potion",
+    "usable": {
+      "type": "health",
+      "data": {
+        "amount": 50,
+        "duration": 0,
+        "cooldown": 0
+      }
+    }
+  },
+  "mana_potion": {
+    "name": "Mana Potion",
+    "description": "Restores mana.",
+    "value": 50,
+    "weight": 0.2,
+    "stack_size": 20,
+    "type": "potion",
+    "usable": {
+      "type": "mana",
+      "data": {
+        "amount": 50,
+        "duration": 0,
+        "cooldown": 0
+      }
+    }
+  },
+  "strength_potion": {
+    "name": "Strength Potion",
+    "description": "Increases strength temporarily.",
+    "value": 75,
+    "weight": 0.2,
+    "stack_size": 10,
+    "type": "potion",
+    "usable": {
+      "type": "strength",
+      "data": {
+        "amount": 10,
+        "duration": 60,
+        "cooldown": 120
+      }
+    }
+  },
+  "speed_potion": {
+    "name": "Speed Potion",
+    "description": "Increases speed temporarily.",
+    "value": 75,
+    "weight": 0.2,
+    "stack_size": 10,
+    "type": "potion",
+    "usable": {
+      "type": "speed",
+      "data": {
+        "amount": 10,
+        "duration": 60,
+        "cooldown": 120
+      }
+    }
+  },
+  "fireball_scroll": {
+    "name": "Fireball Scroll",
+    "description": "Casts a fireball spell.",
+    "value": 150,
+    "weight": 0.1,
+    "stack_size": 5,
+    "type": "scroll",
+    "usable": {
+      "type": "scroll",
+      "data": {
+        "spell": "fireball",
+        "mana_cost": 20,
+        "cooldown": 5
+      }
+    }
+  },
+  "ice_shard_scroll": {
+    "name": "Ice Shard Scroll",
+    "description": "Casts an ice shard spell.",
+    "value": 150,
+    "weight": 0.1,
+    "stack_size": 5,
+    "type": "scroll",
+    "usable": {
+      "type": "scroll",
+      "data": {
+        "spell": "ice_shard",
+        "mana_cost": 20,
+        "cooldown": 5
+      }
+    }
+  },
+  "lightning_bolt_scroll": {
+    "name": "Lightning Bolt Scroll",
+    "description": "Casts a lightning bolt spell.",
+    "value": 150,
+    "weight": 0.1,
+    "stack_size": 5,
+    "type": "scroll",
+    "usable": {
+      "type": "scroll",
+      "data": {
+        "spell": "lightning_bolt",
+        "mana_cost": 20,
+        "cooldown": 5
+      }
+    }
+  },
+  "earthquake_scroll": {
+    "name": "Earthquake Scroll",
+    "description": "Casts an earthquake spell.",
+    "value": 150,
+    "weight": 0.1,
+    "stack_size": 5,
+    "type": "scroll",
+    "usable": {
+      "type": "scroll",
+      "data": {
+        "spell": "earthquake",
+        "mana_cost": 20,
+        "cooldown": 5
+      }
+    }
+  },
+  "iron_sword": {
+    "name": "Iron Sword",
+    "description": "A sturdy iron sword.",
+    "value": 200,
+    "weight": 3.0,
+    "stack_size": 1,
+    "type": "weapon",
+    "usable": {
+      "type": "attack",
+      "data": {
+        "damage": 15,
+        "range": 1.5,
+        "cooldown": 1.0
+      }
+    }
+  },
+  "steel_axe": {
+    "name": "Steel Axe",
+    "description": "A sharp steel axe.",
+    "value": 250,
+    "weight": 4.0,
+    "stack_size": 1,
+    "type": "weapon",
+    "usable": {
+      "type": "attack",
+      "data": {
+        "damage": 20,
+        "range": 1.5,
+        "cooldown": 1.0
+      }
+    }
+  },
+  "golden_staff": {
+    "name": "Golden Staff",
+    "description": "A magical golden staff.",
+    "value": 300,
+    "weight": 2.0,
+    "stack_size": 1,
+    "type": "weapon",
+    "usable": {
+      "type": "magic",
+      "data": {
+        "damage": 25,
+        "range": 3.0,
+        "cooldown": 2.0
+      }
+    }
+  },
+  "leather_armor": {
+    "name": "Leather Armor",
+    "description": "Lightweight leather armor.",
+    "value": 150,
+    "weight": 5.0,
+    "stack_size": 1,
+    "type": "armor",
+    "usable": {
+      "type": "defense",
+      "data": {
+        "defense": 5,
+        "durability": 100
+      }
+    }
+  },
+  "chainmail_armor": {
+    "name": "Chainmail Armor",
+    "description": "Durable chainmail armor.",
+    "value": 250,
+    "weight": 10.0,
+    "stack_size": 1,
+    "type": "armor",
+    "usable": {
+      "type": "defense",
+      "data": {
+        "defense": 10,
+        "durability": 150
+      }
+    }
+  },
+  "plate_armor": {
+    "name": "Plate Armor",
+    "description": "Heavy plate armor.",
+    "value": 400,
+    "weight": 15.0,
+    "stack_size": 1,
+    "type": "armor",
+    "usable": {
+      "type": "defense",
+      "data": {
+        "defense": 15,
+        "durability": 200
+      }
+    }
+  },
+  "wooden_shield": {
+    "name": "Wooden Shield",
+    "description": "A basic wooden shield.",
+    "value": 100,
+    "weight": 3.0,
+    "stack_size": 1,
+    "type": "shield",
+    "usable": {
+      "type": "defense",
+      "data": {
+        "defense": 5,
+        "durability": 50
+      }
+    }
+  },
+  "iron_shield": {
+    "name": "Iron Shield",
+    "description": "A sturdy iron shield.",
+    "value": 200,
+    "weight": 5.0,
+    "stack_size": 1,
+    "type": "shield",
+    "usable": {
+      "type": "defense",
+      "data": {
+        "defense": 10,
+        "durability": 100
+      }
+    }
+  },
+  "magic_shield": {
+    "name": "Magic Shield",
+    "description": "A shield imbued with magic.",
+    "value": 300,
+    "weight": 4.0,
+    "stack_size": 1,
+    "type": "shield"
+  },
+  "health_ring": {
+    "name": "Health Ring",
+    "description": "Increases health.",
+    "value": 200,
+    "weight": 0.1,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "strength_ring": {
+    "name": "Strength Ring",
+    "description": "Increases strength.",
+    "value": 250,
+    "weight": 0.1,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "speed_ring": {
+    "name": "Speed Ring",
+    "description": "Increases speed.",
+    "value": 250,
+    "weight": 0.1,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "mana_ring": {
+    "name": "Mana Ring",
+    "description": "Increases mana.",
+    "value": 200,
+    "weight": 0.1,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_protection": {
+    "name": "Amulet of Protection",
+    "description": "Provides protection from harm.",
+    "value": 300,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_strength": {
+    "name": "Amulet of Strength",
+    "description": "Increases strength.",
+    "value": 350,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_speed": {
+    "name": "Amulet of Speed",
+    "description": "Increases speed.",
+    "value": 350,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_mana": {
+    "name": "Amulet of Mana",
+    "description": "Increases mana.",
+    "value": 300,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_health": {
+    "name": "Amulet of Health",
+    "description": "Increases health.",
+    "value": 300,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_intelligence": {
+    "name": "Amulet of Intelligence",
+    "description": "Increases intelligence.",
+    "value": 350,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_wisdom": {
+    "name": "Amulet of Wisdom",
+    "description": "Increases wisdom.",
+    "value": 350,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_charisma": {
+    "name": "Amulet of Charisma",
+    "description": "Increases charisma.",
+    "value": 300,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  },
+  "amulet_of_dexterity": {
+    "name": "Amulet of Dexterity",
+    "description": "Increases dexterity.",
+    "value": 300,
+    "weight": 0.2,
+    "stack_size": 1,
+    "type": "accessory"
+  }
+}
