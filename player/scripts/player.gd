@@ -44,6 +44,8 @@ class_name Player extends CharacterBody2D
 @export_range(0, 0.5) var input_pause_after_wall_jump: float = 0.1
 ## The angle at which your player will jump away from the wall. 0 is straight away from the wall, 90 is straight up. Does not account for gravity
 @export_range(0, 90) var wall_kick_angle: float = 60.0
+## Allows your player to slide off of walls.
+@export var can_wall_slide: bool = false
 ## The player's gravity will be divided by this number when touch a wall and descending. Set to 1 by default meaning no change will be made to the gravity and there is effectively no wall sliding. THIS IS OVERRIDDED BY WALL LATCH.
 @export_range(1, 20) var wall_sliding: float = 1.0
 ## If enabled, the player's gravity will be set to 0 when touching a wall and descending. THIS WILL OVERRIDE WALLSLIDING.
@@ -371,9 +373,10 @@ func handle_gravity_and_terminal_velocity():
 
 
 func handle_wall_gravity_and_velocity():
-	applied_terminal_velocity = terminal_velocity / wall_sliding
+	if can_wall_slide:
+		applied_terminal_velocity = terminal_velocity / wall_sliding
 
-	change_state(state_machine.WALL_SLIDING)
+		change_state(state_machine.WALL_SLIDING)
 
 
 func _handle_single_jump():
