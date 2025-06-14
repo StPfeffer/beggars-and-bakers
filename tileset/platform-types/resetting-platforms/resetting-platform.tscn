@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dljn46sjjlxr"]
+
+[ext_resource type="Script" path="res://tileset/platform-types/resetting-platforms/resetting-platform.gd" id="1_tj8ry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bobt"]
+resource_local_to_scene = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68ee1"]
+resource_local_to_scene = true
+
+[node name="ResettingPlatform" type="StaticBody2D"]
+collision_mask = 3
+script = ExtResource("1_tj8ry")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7bobt")
+
+[node name="Area" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="Detector" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_68ee1")
