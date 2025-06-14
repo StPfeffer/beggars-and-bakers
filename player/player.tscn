@@ -27,7 +27,7 @@
 [ext_resource type="Script" uid="uid://d2bf1e1qoe8dk" path="res://player/states/fall.gd" id="22_2fe0a"]
 [ext_resource type="Script" uid="uid://18f5nolfhuds" path="res://player/states/wall_sliding.gd" id="25_o70aj"]
 [ext_resource type="AudioStream" uid="uid://cu0jhhf83adgv" path="res://souds/caminhar_cavaleiro.MP3" id="26_jy1mm"]
-[ext_resource type="AudioStream" uid="uid://dg6gkwkh1eq5w" path="res://souds/jump.MP3" id="27_rptt4"]
+[ext_resource type="AudioStream" uid="uid://dg6gkwkh1eq5w" path="res://souds/jump.MP3" id="28_rptt4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oblp7"]
 atlas = ExtResource("3_smyco")
@@ -803,11 +803,11 @@ target_position = Vector2(-30, 0)
 position = Vector2(0, -10)
 target_position = Vector2(30, 0)
 
-[node name="Jump sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("27_rptt4")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="StepsAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_jy1mm")
+
+[node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_rptt4")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
