@@ -79,7 +79,7 @@ script = ExtResource("1_kaw17")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b61ix")
 autoplay = "default"
-frame_progress = 0.106702
+frame_progress = 0.575695
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_6lhcj")

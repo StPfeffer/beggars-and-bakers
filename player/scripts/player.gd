@@ -529,3 +529,8 @@ func _process(delta):
 func set_coin(new_coin_count: int) -> void:
 	coin_counter = new_coin_count
 	coin_label.text = str(coin_counter)
+
+
+func set_camera_offset(x, y):
+	camera.offset.x = x
+	camera.offset.y = y

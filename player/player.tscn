@@ -739,7 +739,7 @@ shift_amount = 17
 position = Vector2(9, -72)
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_p2caf")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

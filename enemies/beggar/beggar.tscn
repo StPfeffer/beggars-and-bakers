@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://bn1eybjs4bs2b" path="res://enemies/beggar/sprites/tres/walk.tres" id="10_xfcfk"]
 [ext_resource type="AudioStream" uid="uid://dvn2vrsw8oj11" path="res://enemies/beggar/sounds/base.mp3" id="11_20d1r"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kk7if"]
+radius = 13.0
+height = 62.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_p4hgi"]
 atlas = ExtResource("1_s0mep")
 region = Rect2(0, 0, 128, 128)
@@ -417,10 +421,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kk7if"]
-radius = 13.0
-height = 62.0
-
 [node name="Beggar" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 19
@@ -429,6 +429,10 @@ speed = 200
 chaseSpeed = 400
 acceleration = 500
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -32)
+shape = SubResource("CapsuleShape2D_kk7if")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -64)
 sprite_frames = SubResource("SpriteFrames_rw6i3")
@@ -436,19 +440,9 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite2D"]
-visible = false
 position = Vector2(0, 32)
 target_position = Vector2(125, 0)
 collision_mask = 19
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-2, -32)
-shape = SubResource("CapsuleShape2D_kk7if")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("10_xfcfk")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -461,7 +455,7 @@ wait_time = 5.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_20d1r")
-volume_db = -40.0
+volume_db = -15.0
 autoplay = true
 max_distance = 451.0
 attenuation = 2.73208
