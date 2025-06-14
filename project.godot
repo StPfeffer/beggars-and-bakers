@@ -14,6 +14,7 @@ config/name="Beggars & Bakers"
 run/main_scene="uid://b7lnmjlb1wp1m"
 config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=60
+boot_splash/bg_color=Color(0.293502, 0.216795, 0.0555433, 1)
 boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 
