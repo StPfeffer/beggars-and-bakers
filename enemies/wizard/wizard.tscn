@@ -689,13 +689,11 @@ autoplay = "idle"
 frame_progress = 0.353914
 
 [node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite2D"]
-visible = false
 position = Vector2(0, 32)
 target_position = Vector2(125, 0)
 collision_mask = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-4, -31.5)
 shape = SubResource("RectangleShape2D_7uceh")
 
