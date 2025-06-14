@@ -512,18 +512,19 @@ func handle_falling(delta):
 
 #endregion
 
-@onready var footstep_sound = $AudioStreamPlayer2D  # Certifique-se de que o caminho do nó está correto
-
-var is_walking = false
+@onready var footstep_sound = $StepsAudio
+@onready var jump_sound = $JumpAudio
 
 func _process(delta):
-	if is_on_floor() and velocity.length() > 0.1:  # Se estiver se movendo
-		if !footstep_sound.playing:  # Evita tocar várias vezes ao mesmo tempo
+	if current_state == state_machine.RUN:
+		if !footstep_sound.playing:
 			footstep_sound.play()
-		is_walking = true
 	else:
-		is_walking = false
 		footstep_sound.stop()
+
+	if state_machine.JUMP == current_state:
+		if !jump_sound.playing:
+			jump_sound.play()
 
 func set_coin(new_coin_count: int) -> void:
 	coin_counter = new_coin_count
