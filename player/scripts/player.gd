@@ -128,12 +128,14 @@ var is_turning: bool = false
 var current_state = null
 var previous_state = null
 
+var coin_counter = 0
+
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var camera: Camera2D = $Camera2D
 @onready var state_machine = $StateMachine
-
+@onready var coin_label: Label = $Camera2D/CoinLabel
 
 #region Main Loop Functions
 
@@ -230,7 +232,7 @@ func change_state(next_state):
 		previous_state.exit_state()
 		current_state.enter_state()
 
-		print("State Change from: " + previous_state.name + " to: " + current_state.name)
+		#print("State Change from: " + previous_state.name + " to: " + current_state.name)
 
 
 func handle_horizontal_movement(delta):
@@ -519,3 +521,11 @@ func _process(delta):
 	else:
 		is_walking = false
 		footstep_sound.stop()
+
+func set_coin(new_coin_count: int) -> void:
+	coin_counter = new_coin_count
+	coin_label.text = str(coin_counter)
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("coin"):
+		set_coin(coin_counter + 1)

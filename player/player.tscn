@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://dfdqc4uwjj0v"]
+[gd_scene load_steps=119 format=3 uid="uid://dfdqc4uwjj0v"]
 
 [ext_resource type="Texture2D" uid="uid://dypc6jr8h70pd" path="res://player/sprites/idle.png" id="1_cqwbn"]
 [ext_resource type="Script" uid="uid://dp3rih3qebykh" path="res://player/scripts/player.gd" id="1_yuw0m"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://dpgjphhrk8ivc" path="res://player/states/states.gd" id="17_rd7im"]
 [ext_resource type="Script" uid="uid://je4ap76s4syq" path="res://player/states/locked.gd" id="18_10ovg"]
 [ext_resource type="Script" uid="uid://b0cgvwbxgq4i7" path="res://player/states/idle.gd" id="18_nobr8"]
+[ext_resource type="PackedScene" uid="uid://mmu0saxjmj4n" path="res://items/coin/coin.tscn" id="18_uw77l"]
 [ext_resource type="Script" uid="uid://cbgyf0jljdxue" path="res://player/states/run.gd" id="19_jjv2n"]
 [ext_resource type="Script" uid="uid://1ijqti50y1xj" path="res://player/states/jump.gd" id="20_jxofw"]
 [ext_resource type="Texture2D" uid="uid://do5xk78bhrthx" path="res://player/sprites/tres/dash.tres" id="20_k4bvp"]
@@ -722,6 +723,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knn7v"]
 size = Vector2(36, 68)
 
+[sub_resource type="LabelSettings" id="LabelSettings_7pqkx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pqkx"]
+size = Vector2(45, 77)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 29
@@ -743,11 +749,22 @@ shape = SubResource("RectangleShape2D_knn7v")
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("17_pwj2j")
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CoinLabel" type="Label" parent="Camera2D"]
+offset_left = -593.0
+offset_top = -349.0
+offset_right = -532.0
+offset_bottom = -326.0
+text = "0"
+label_settings = SubResource("LabelSettings_7pqkx")
+
+[node name="coin" parent="Camera2D" instance=ExtResource("18_uw77l")]
+position = Vector2(-614, -337)
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("17_rd7im")
@@ -787,3 +804,13 @@ target_position = Vector2(30, 0)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_jy1mm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -34.5)
+shape = SubResource("RectangleShape2D_7pqkx")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
