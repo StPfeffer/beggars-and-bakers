@@ -1671,9 +1671,21 @@ position = Vector2(1, -753)
 scale = Vector2(1, 3.71676)
 texture = ExtResource("1_406qh")
 
+[node name="BG layer 4" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(3, 0)
+repeat_size = Vector2(1022, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG layer 4"]
+position = Vector2(1, -148)
+scale = Vector2(1, 1.45665)
+texture = ExtResource("2_jldy4")
+
 [node name="Nuvem Pequena 1" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.9, 0.9)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Pequena 1"]
@@ -1684,6 +1696,7 @@ texture = ExtResource("3_e78uj")
 [node name="Nuvem Pequena 2" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.9, 0.9)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Pequena 2"]
@@ -1695,6 +1708,7 @@ texture = ExtResource("3_e78uj")
 scroll_scale = Vector2(0.9, 0.9)
 scroll_offset = Vector2(-277, -148)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Pequena 3"]
@@ -1706,6 +1720,7 @@ texture = ExtResource("3_e78uj")
 scroll_scale = Vector2(0.9, 0.9)
 scroll_offset = Vector2(-277, -148)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Pequena 4"]
@@ -1716,6 +1731,7 @@ texture = ExtResource("3_e78uj")
 [node name="Nuvem Média 1" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.8, 0.8)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Média 1"]
@@ -1727,6 +1743,7 @@ texture = ExtResource("4_u35x1")
 scroll_scale = Vector2(0.8, 0.8)
 scroll_offset = Vector2(-277, -148)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Média 2"]
@@ -1737,6 +1754,7 @@ texture = ExtResource("4_u35x1")
 [node name="Nuvem Média Menor 1" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.8, 0.8)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Média Menor 1"]
@@ -1748,6 +1766,7 @@ texture = ExtResource("5_ubdnn")
 scroll_scale = Vector2(0.8, 0.8)
 scroll_offset = Vector2(-277, -148)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Média Menor 2"]
@@ -1758,6 +1777,7 @@ texture = ExtResource("5_ubdnn")
 [node name="Nuvem Grande 1" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Grande 1"]
@@ -1768,6 +1788,7 @@ texture = ExtResource("6_lxejw")
 [node name="Nuvem Grande 2" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-40, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/Nuvem Grande 2"]
@@ -1775,30 +1796,19 @@ position = Vector2(182, -648.5)
 scale = Vector2(1, 1.11058)
 texture = ExtResource("6_lxejw")
 
-[node name="BG layer 4" type="Parallax2D" parent="BG"]
+[node name="BG layer 3" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.6, 0.6)
 scroll_offset = Vector2(3, 0)
 repeat_size = Vector2(1022, 0)
 repeat_times = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="BG/BG layer 4"]
-position = Vector2(1, -246.5)
-scale = Vector2(1, 2.02601)
-texture = ExtResource("2_jldy4")
-
-[node name="BG layer 3" type="Parallax2D" parent="BG"]
-scroll_scale = Vector2(0.7, 0.7)
-scroll_offset = Vector2(3, 0)
-repeat_size = Vector2(1022, 0)
-repeat_times = 3
-
 [node name="Sprite2D" type="Sprite2D" parent="BG/BG layer 3"]
-position = Vector2(1, -53)
-scale = Vector2(1, 1.23121)
+position = Vector2(1, -2.50002)
+scale = Vector2(1, 1.26879)
 texture = ExtResource("3_qeex7")
 
 [node name="BG layer 2" type="Parallax2D" parent="BG"]
-scroll_scale = Vector2(0.8, 0.8)
+scroll_scale = Vector2(0.7, 0.7)
 scroll_offset = Vector2(3, 0)
 repeat_size = Vector2(1022, 0)
 repeat_times = 3
@@ -1855,4 +1865,5 @@ facingRight = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_3r2pw")
+volume_db = -43.099
 autoplay = true
