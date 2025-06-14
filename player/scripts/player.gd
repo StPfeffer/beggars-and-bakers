@@ -529,7 +529,3 @@ func _process(delta):
 func set_coin(new_coin_count: int) -> void:
 	coin_counter = new_coin_count
 	coin_label.text = str(coin_counter)
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.is_in_group("coin"):
-		set_coin(coin_counter + 1)

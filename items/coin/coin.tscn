@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://mmu0saxjmj4n"]
+[gd_scene load_steps=14 format=3 uid="uid://mmu0saxjmj4n"]
 
 [ext_resource type="Script" uid="uid://bos62ee8ikb1r" path="res://items/coin/coin.gd" id="1_2gsyk"]
 [ext_resource type="Texture2D" uid="uid://cndiyv65q64xh" path="res://items/coin/coin.png" id="1_bn83u"]
+[ext_resource type="AudioStream" uid="uid://mjbb7plfik3l" path="res://souds/coin_pick_up.mp3" id="3_vwooy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bn83u"]
 radius = 12.0
@@ -83,5 +84,8 @@ sprite_frames = SubResource("SpriteFrames_4nj5t")
 autoplay = "default"
 frame_progress = 0.42844
 offset = Vector2(0, -1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vwooy")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

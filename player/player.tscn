@@ -805,9 +805,11 @@ target_position = Vector2(30, 0)
 
 [node name="StepsAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_jy1mm")
+volume_db = -20.0
 
 [node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("28_rptt4")
+volume_db = -25.0
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
