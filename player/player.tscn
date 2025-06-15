@@ -739,7 +739,7 @@ shift_amount = 17
 position = Vector2(9, -72)
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_p2caf")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -805,7 +805,7 @@ target_position = Vector2(30, 0)
 
 [node name="StepsAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_jy1mm")
-volume_db = -20.0
+volume_db = -10.0
 
 [node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("28_rptt4")

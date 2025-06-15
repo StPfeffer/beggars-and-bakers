@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8itc0ygiua3a"
-path="res://.godot/imported/house-1.png-94087d0f96a3cf57f53cf87beb089f20.ctex"
+uid="uid://bm2mc8brgtp0y"
+path="res://.godot/imported/house-medium-2.png-08ed09c21fd8d61799a06d38ccfd4e17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset/village/house-1.png"
-dest_files=["res://.godot/imported/house-1.png-94087d0f96a3cf57f53cf87beb089f20.ctex"]
+source_file="res://tileset/village/house-medium-2.png"
+dest_files=["res://.godot/imported/house-medium-2.png-08ed09c21fd8d61799a06d38ccfd4e17.ctex"]
 
 [params]
 

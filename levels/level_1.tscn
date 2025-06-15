@@ -1,22 +1,33 @@
-[gd_scene load_steps=26 format=4 uid="uid://cd2ho68xvcge8"]
+[gd_scene load_steps=37 format=4 uid="uid://cd2ho68xvcge8"]
 
 [ext_resource type="Script" uid="uid://cgl0fl2tm225i" path="res://levels/level_1.gd" id="1_7nvrk"]
 [ext_resource type="Texture2D" uid="uid://oewqtkm8ngyf" path="res://assets/gandalf_hardcore/background/normal_bg/gandalfhardcore_background layers_layer 3.png" id="1_oqlok"]
+[ext_resource type="AudioStream" uid="uid://dgwvvrutgqhiw" path="res://souds/medieval_village_music.mp3" id="2_0x1rk"]
 [ext_resource type="Texture2D" uid="uid://uijfam3iggpx" path="res://assets/gandalf_hardcore/background/normal_bg/gandalfhardcore_background layers_layer 5.png" id="2_7nvrk"]
 [ext_resource type="Texture2D" uid="uid://b8lkq0edxjbqo" path="res://assets/gandalf_hardcore/background/normal_bg/gandalfhardcore_background layers_layer 4.png" id="3_jkxa6"]
+[ext_resource type="AudioStream" uid="uid://cwp07ig03llbw" path="res://souds/medieval_village_atmosphere.mp3" id="3_pnpm1"]
 [ext_resource type="Texture2D" uid="uid://dwu23kkhdt5l0" path="res://assets/gandalf_hardcore/tileset/cloud1.png" id="6_xapae"]
 [ext_resource type="Texture2D" uid="uid://btck744hqv4pi" path="res://assets/gandalf_hardcore/tileset/cloud3.png" id="7_r0nt2"]
 [ext_resource type="Texture2D" uid="uid://6of5qiedr87m" path="res://assets/gandalf_hardcore/background/normal_bg/gandalfhardcore_background layers_layer 2.png" id="8_w75he"]
 [ext_resource type="Texture2D" uid="uid://dia40m1yrs7n3" path="res://assets/gandalf_hardcore/tileset/cloud2.png" id="8_xv8d5"]
 [ext_resource type="Texture2D" uid="uid://dr052qqi4eu4d" path="res://assets/gandalf_hardcore/tileset/cloud4.png" id="9_0wxk8"]
 [ext_resource type="Texture2D" uid="uid://s6h6fl401kpx" path="res://assets/gandalf_hardcore/background/normal_bg/gandalfhardcore_background layers_layer 1.png" id="9_udfhf"]
-[ext_resource type="Texture2D" uid="uid://cimv2k62eolst" path="res://tileset/village/house-2.png" id="10_oqlok"]
-[ext_resource type="Texture2D" uid="uid://cpby44h0kfuwn" path="res://tileset/village/house-3.png" id="11_7nvrk"]
-[ext_resource type="Texture2D" uid="uid://h30iow3i7kwk" path="res://tileset/village/house-4.png" id="12_jkxa6"]
+[ext_resource type="Texture2D" uid="uid://cimv2k62eolst" path="res://tileset/village/house-big-2.png" id="10_oqlok"]
+[ext_resource type="Texture2D" uid="uid://cpby44h0kfuwn" path="res://tileset/village/house-big-3.png" id="11_7nvrk"]
+[ext_resource type="Texture2D" uid="uid://c317vngwmk8k5" path="res://tileset/village/house-big-6.png" id="11_i6od7"]
+[ext_resource type="Texture2D" uid="uid://dfyax1iguohnw" path="res://assets/decoration/tree/middle_lane/middle_lane_tree2.png" id="11_voubc"]
+[ext_resource type="Texture2D" uid="uid://h30iow3i7kwk" path="res://tileset/village/house-big-4.png" id="12_jkxa6"]
+[ext_resource type="Texture2D" uid="uid://bhvd32pbko7yi" path="res://tileset/village/house-medium-1.png" id="12_ryfpa"]
+[ext_resource type="Texture2D" uid="uid://bm2mc8brgtp0y" path="res://tileset/village/house-medium-2.png" id="16_ntdhj"]
+[ext_resource type="Texture2D" uid="uid://ndhgjosobwni" path="res://tileset/village/house-big-5.png" id="17_0fu15"]
+[ext_resource type="PackedScene" uid="uid://mmu0saxjmj4n" path="res://items/coin/coin.tscn" id="24_ryfpa"]
 [ext_resource type="Texture2D" uid="uid://ct33yqdn4r1nj" path="res://tileset/village/village_props.png" id="25_he3br"]
+[ext_resource type="Texture2D" uid="uid://b5w8v5aekjvae" path="res://assets/decoration/bush/bushes_10/small.png" id="25_ntdhj"]
 [ext_resource type="Texture2D" uid="uid://cr7kntqdjopig" path="res://tileset/gandalf_hardcore/floor_tiles_snowy.png" id="26_pqv1t"]
+[ext_resource type="Texture2D" uid="uid://b16d5g2ujnefa" path="res://assets/decoration/tree/middle_lane/middle_lane_tree4.png" id="27_0x1rk"]
 [ext_resource type="Texture2D" uid="uid://dn7m4xbcyq4o3" path="res://tileset/gandalf_hardcore/floor_tiles_normal.png" id="27_t8qbq"]
 [ext_resource type="Texture2D" uid="uid://b3xnunrtjreku" path="res://tileset/gandalf_hardcore/floor_tiles_autumn.png" id="28_ax4go"]
+[ext_resource type="Texture2D" uid="uid://clr3nf235qpet" path="res://assets/decoration/tree/middle_lane/middle_lane_tree3.png" id="28_pnpm1"]
 [ext_resource type="PackedScene" uid="uid://dfdqc4uwjj0v" path="res://player/player.tscn" id="30_7pipe"]
 [ext_resource type="AudioStream" uid="uid://da2vd67u6qh3l" path="res://souds/trilha.mp3" id="35_35dci"]
 
@@ -1648,8 +1659,22 @@ sources/0 = SubResource("TileSetAtlasSource_ubdnn")
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_7nvrk")
 
+[node name="VillageCenter" type="Node2D" parent="."]
+
+[node name="VillageMusic" type="AudioStreamPlayer2D" parent="VillageCenter"]
+stream = ExtResource("2_0x1rk")
+volume_db = -15.0
+autoplay = true
+max_distance = 3500.0
+
+[node name="VillageAtmosphere" type="AudioStreamPlayer2D" parent="VillageCenter"]
+stream = ExtResource("3_pnpm1")
+volume_db = 5.0
+autoplay = true
+max_distance = 3000.0
+
 [node name="BG" type="Node2D" parent="."]
-position = Vector2(83, -51)
+position = Vector2(-28, -107)
 
 [node name="BG layer 6" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(0.5, 0.5)
@@ -1830,11 +1855,32 @@ repeat_times = 3
 position = Vector2(1, 13)
 texture = ExtResource("9_udfhf")
 
+[node name="MiddleLaneTree6" type="Sprite2D" parent="."]
+position = Vector2(-985, -243)
+scale = Vector2(1.68, 1.68)
+texture = ExtResource("11_voubc")
+
+[node name="MiddleLaneTree5" type="Sprite2D" parent="."]
+position = Vector2(-2046, -251)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("27_0x1rk")
+
 [node name="Houses" type="Node2D" parent="."]
 
+[node name="House-big-6" type="Sprite2D" parent="Houses"]
+position = Vector2(-494, -152)
+scale = Vector2(2.47541, 2.47541)
+texture = ExtResource("11_i6od7")
+
+[node name="House-medium-1" type="Sprite2D" parent="Houses"]
+position = Vector2(-2134, -227)
+scale = Vector2(2.08, 2.08)
+texture = ExtResource("12_ryfpa")
+
 [node name="House-1" type="Sprite2D" parent="Houses"]
-position = Vector2(-845, -207)
+position = Vector2(-1389, -231)
 texture = ExtResource("10_oqlok")
+flip_h = true
 
 [node name="House-2" type="Sprite2D" parent="Houses"]
 position = Vector2(-241, -233)
@@ -1845,16 +1891,57 @@ position = Vector2(-581, -185)
 texture = ExtResource("11_7nvrk")
 
 [node name="House-4" type="Sprite2D" parent="Houses"]
-position = Vector2(-1216, -201)
+position = Vector2(-1012, -202)
 texture = ExtResource("12_jkxa6")
 
-[node name="House-5" type="Sprite2D" parent="Houses"]
-position = Vector2(2337, -303)
-texture = ExtResource("10_oqlok")
+[node name="House-big-7" type="Sprite2D" parent="Houses"]
+position = Vector2(-2494, -263)
+scale = Vector2(2.47541, 2.47541)
+texture = ExtResource("11_i6od7")
 
-[node name="House-7" type="Sprite2D" parent="Houses"]
-position = Vector2(1463, -238)
-texture = ExtResource("11_7nvrk")
+[node name="House-medium-2" type="Sprite2D" parent="Houses"]
+position = Vector2(-2840, -293)
+scale = Vector2(2.68, 2.68)
+texture = ExtResource("16_ntdhj")
+
+[node name="House-big-5" type="Sprite2D" parent="Houses"]
+position = Vector2(-3278, -293)
+scale = Vector2(2.48, 2.48)
+texture = ExtResource("17_0fu15")
+
+[node name="House-medium-3" type="Sprite2D" parent="Houses"]
+position = Vector2(1685, -234)
+scale = Vector2(1.82412, 1.82412)
+texture = ExtResource("12_ryfpa")
+
+[node name="House-big-8" type="Sprite2D" parent="Houses"]
+position = Vector2(2112, -326)
+scale = Vector2(2.47541, 2.47541)
+texture = ExtResource("11_i6od7")
+
+[node name="House-medium-4" type="Sprite2D" parent="Houses"]
+position = Vector2(872, -239)
+scale = Vector2(2.44, 2.44)
+texture = ExtResource("16_ntdhj")
+
+[node name="House-big-9" type="Sprite2D" parent="Houses"]
+position = Vector2(1195, -260)
+scale = Vector2(2.48, 2.48)
+texture = ExtResource("17_0fu15")
+
+[node name="MiddleLaneTree3" type="Sprite2D" parent="."]
+position = Vector2(-1635, -128)
+texture = ExtResource("28_pnpm1")
+
+[node name="MiddleLaneTree2" type="Sprite2D" parent="."]
+position = Vector2(7, -88)
+scale = Vector2(0.640002, 0.640002)
+texture = ExtResource("11_voubc")
+
+[node name="MiddleLaneTree8" type="Sprite2D" parent="."]
+position = Vector2(663, -108)
+scale = Vector2(0.84, 0.84)
+texture = ExtResource("28_pnpm1")
 
 [node name="Player" parent="." instance=ExtResource("30_7pipe")]
 position = Vector2(-126, -1)
@@ -1871,3 +1958,30 @@ tile_set = SubResource("TileSet_rila8")
 stream = ExtResource("35_35dci")
 volume_db = -43.099
 autoplay = true
+
+[node name="coin" parent="." node_paths=PackedStringArray("player") instance=ExtResource("24_ryfpa")]
+position = Vector2(-502, -155)
+player = NodePath("../Player")
+
+[node name="Small15" type="Sprite2D" parent="coin"]
+position = Vector2(-313, 141)
+texture = ExtResource("25_ntdhj")
+
+[node name="Small16" type="Sprite2D" parent="coin"]
+position = Vector2(255, 142)
+texture = ExtResource("25_ntdhj")
+
+[node name="Small17" type="Sprite2D" parent="coin"]
+position = Vector2(466, 140)
+texture = ExtResource("25_ntdhj")
+
+[node name="Small18" type="Sprite2D" parent="coin"]
+position = Vector2(-846, 141)
+texture = ExtResource("25_ntdhj")
+
+[node name="Small19" type="Sprite2D" parent="coin"]
+position = Vector2(-1519, 110)
+texture = ExtResource("25_ntdhj")
+
+[connection signal="finished" from="VillageCenter/VillageMusic" to="." method="_on_village_music_finished"]
+[connection signal="finished" from="VillageCenter/VillageAtmosphere" to="." method="_on_village_atmosphere_finished"]
