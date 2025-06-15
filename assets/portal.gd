@@ -15,4 +15,5 @@ func _ready() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	portal_sound.play()
-	get_tree().change_scene_to_file(scene)
+	if scene:
+		get_tree().change_scene_to_file(scene)

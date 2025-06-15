@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://cd2ho68xvcge8"]
+[gd_scene load_steps=38 format=4 uid="uid://cd2ho68xvcge8"]
 
 [ext_resource type="Script" uid="uid://cgl0fl2tm225i" path="res://levels/level_1.gd" id="1_7nvrk"]
 [ext_resource type="Texture2D" uid="uid://oewqtkm8ngyf" path="res://assets/gandalf_hardcore/background/normal_bg/gandalfhardcore_background layers_layer 3.png" id="1_oqlok"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://b3xnunrtjreku" path="res://tileset/gandalf_hardcore/floor_tiles_autumn.png" id="28_ax4go"]
 [ext_resource type="Texture2D" uid="uid://clr3nf235qpet" path="res://assets/decoration/tree/middle_lane/middle_lane_tree3.png" id="28_pnpm1"]
 [ext_resource type="PackedScene" uid="uid://dfdqc4uwjj0v" path="res://player/player.tscn" id="30_7pipe"]
+[ext_resource type="PackedScene" uid="uid://44enpfk51lgr" path="res://enemies/beggar/beggar.tscn" id="31_06ecp"]
 [ext_resource type="AudioStream" uid="uid://da2vd67u6qh3l" path="res://souds/trilha.mp3" id="35_35dci"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubdnn"]
@@ -1944,7 +1945,7 @@ scale = Vector2(0.84, 0.84)
 texture = ExtResource("28_pnpm1")
 
 [node name="Player" parent="." instance=ExtResource("30_7pipe")]
-position = Vector2(-126, -1)
+position = Vector2(-4928, -162)
 max_speed = 280.0
 shift_amount = 20
 jumps = 4
@@ -1982,6 +1983,29 @@ texture = ExtResource("25_ntdhj")
 [node name="Small19" type="Sprite2D" parent="coin"]
 position = Vector2(-1519, 110)
 texture = ExtResource("25_ntdhj")
+
+[node name="Beggar" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_06ecp")]
+player = NodePath("../Player")
+
+[node name="Beggar2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_06ecp")]
+position = Vector2(-729, -6)
+player = NodePath("../Player")
+
+[node name="Beggar6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_06ecp")]
+position = Vector2(1035, -47)
+player = NodePath("../Player")
+
+[node name="Beggar3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_06ecp")]
+position = Vector2(-1614, -8)
+player = NodePath("../Player")
+
+[node name="Beggar4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_06ecp")]
+position = Vector2(-3431, -81)
+player = NodePath("../Player")
+
+[node name="Beggar5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_06ecp")]
+position = Vector2(-3209, -81)
+player = NodePath("../Player")
 
 [connection signal="finished" from="VillageCenter/VillageMusic" to="." method="_on_village_music_finished"]
 [connection signal="finished" from="VillageCenter/VillageAtmosphere" to="." method="_on_village_atmosphere_finished"]

@@ -12,16 +12,17 @@ var sprite = $AnimatedSprite2D
 var picked = false;
 
 
-func _on_area_entered(area: Area2D) -> void:
-	if picked:
-		return
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
+		if picked:
+			return
 
-	pickupSound.play()
+		pickupSound.play()
 
-	sprite.hide()
-	picked = true
+		sprite.hide()
+		picked = true
 
-	player.set_coin(player.coin_counter + 1)
+		player.set_coin(player.coin_counter + 1)
 
-	await pickupSound.finished
-	queue_free()
+		await pickupSound.finished
+		queue_free()

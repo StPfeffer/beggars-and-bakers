@@ -1,8 +1,17 @@
 extends Area2D
 
+@onready
+var secretSound = $AudioStreamPlayer2D
+
+var alreadyEntered = false
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
+		if !alreadyEntered:
+			secretSound.play()
+
+		alreadyEntered = true
 		var parent = get_parent()
 		if parent:
 			var fade_tween = get_tree().create_tween().set_ease(Tween.EASE_IN)

@@ -455,7 +455,7 @@ wait_time = 5.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_20d1r")
-volume_db = -15.0
+volume_db = 15.0
 autoplay = true
 max_distance = 451.0
 attenuation = 2.73208
