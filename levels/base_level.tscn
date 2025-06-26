@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://b7lnmjlb1wp1m"]
+[gd_scene load_steps=51 format=4 uid="uid://b7lnmjlb1wp1m"]
 
 [ext_resource type="Texture2D" uid="uid://djrs1wgwtptd4" path="res://assets/gandalf_hardcore/background/autumn_bg/gandalfhardcore_background layers_layer 5.png" id="1_406qh"]
 [ext_resource type="Texture2D" uid="uid://cr7kntqdjopig" path="res://tileset/gandalf_hardcore/floor_tiles_snowy.png" id="1_ofdan"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://crxkeu66gq8u4" path="res://hidden_trigger.tscn" id="36_n1xos"]
 [ext_resource type="Texture2D" uid="uid://b5w8v5aekjvae" path="res://assets/decoration/bush/bushes_10/small.png" id="36_nkpol"]
 [ext_resource type="Texture2D" uid="uid://dfyax1iguohnw" path="res://assets/decoration/tree/middle_lane/middle_lane_tree2.png" id="37_2kd00"]
+[ext_resource type="PackedScene" uid="uid://gx4q1xxxrng2" path="res://levels/pause_menu.tscn" id="38_77ewo"]
 [ext_resource type="Texture2D" uid="uid://cgb0453d1ahn7" path="res://assets/decoration/tree/middle_lane/middle_lane_tree7.png" id="38_xxq71"]
 [ext_resource type="Texture2D" uid="uid://cuct5wfr85k3o" path="res://assets/decoration/tree/middle_lane/middle_lane_tree8.png" id="39_67d3x"]
 
@@ -3626,7 +3627,7 @@ tile_map_data = PackedByteArray("AAD5/wAACAAKAAAAAAD6/wAACAAKAAAAAAD7/wAACAAKAAA
 tile_set = SubResource("TileSet_rila8")
 
 [node name="Player" parent="." instance=ExtResource("4_s3jm0")]
-position = Vector2(2108, -107)
+position = Vector2(-221.112, -41.331)
 max_speed = 280.0
 shift_amount = 20
 jumps = 4
@@ -3762,3 +3763,5 @@ texture = ExtResource("29_m3pju")
 stream = ExtResource("12_3r2pw")
 volume_db = -43.099
 autoplay = true
+
+[node name="pause_menu" parent="." instance=ExtResource("38_77ewo")]
