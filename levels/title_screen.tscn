@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=3 uid="uid://ciu84hai6t7es"]
+
+[ext_resource type="Texture2D" uid="uid://cj32054rinbkt" path="res://Screenshot_7.png" id="1_gynrd"]
+[ext_resource type="Script" uid="uid://c65aa24jy3l5f" path="res://scripts/title_screen.gd" id="1_ryob0"]
+[ext_resource type="Texture2D" uid="uid://bw1e5rlj06ewc" path="res://game_logo.png" id="2_ryob0"]
+[ext_resource type="Theme" uid="uid://4r72fw4gdoma" path="res://assets/title_screen.tres" id="3_gynrd"]
+[ext_resource type="Texture2D" uid="uid://ngmd3y1edkdm" path="res://player/sprites/new/protect.png" id="4_qcbqw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryob0"]
+
+[sub_resource type="Animation" id="Animation_ryob0"]
+resource_name = "review"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.485703, 0.485704, 0.485703, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.733333),
+"transitions": PackedFloat32Array(0.482969, 1),
+"update": 0,
+"values": [Vector2(-539.56, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/player_image:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0346802, 0.866667, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_74c26"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/player_image:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcbqw"]
+_data = {
+&"RESET": SubResource("Animation_74c26"),
+&"review": SubResource("Animation_ryob0")
+}
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ryob0")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_gynrd")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+
+[node name="game_logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ryob0")
+
+[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_gynrd")
+text = "START
+"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ryob0")
+
+[node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_gynrd")
+text = "CREDITS
+"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ryob0")
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_gynrd")
+text = "QUIT GAME"
+
+[node name="player_image" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_qcbqw")
+expand_mode = 2
+flip_h = true
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qcbqw")
+}
+autoplay = "review"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]
